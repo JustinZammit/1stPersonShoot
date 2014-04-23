@@ -9,7 +9,7 @@ function Start () {
 
 function Update () {
 	//move the objects towards the camera
-	transform.Translate(Vector3.back * objectSpeed * Time.deltaTime);
+	transform.Translate(Vector3.forward * objectSpeed * Time.deltaTime);
 }
 
 
