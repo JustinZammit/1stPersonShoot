@@ -1,7 +1,7 @@
 ﻿#pragma strict
 
 function Start () {
-	Screen.showCursor = true;
+	Screen.showCursor = false;
 }
 	var line:LineRenderer;
 function Update () {
@@ -43,7 +43,7 @@ function Update () {
 			
 			//hit the cube.
 			//for example to only destroy objects tagged 'cube'
-			if (hit.collider.gameObject.tag == "enemy")
+			if ((hit.collider.gameObject.tag == "enemyUfo") || (hit.collider.gameObject.tag == "enemyGround"))
 			{
 			//destroy the cube
 			Destroy(hit.collider.gameObject);
