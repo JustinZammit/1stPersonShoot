@@ -14,15 +14,27 @@ function OnGUI()
 
 }
 
+function checkLives()
+{
+	lives = GameObject.FindGameObjectWithTag("healthReduce").GetComponent(healthController).lives;
+}
 
 function Start () {
+
 	Screen.showCursor = false;
 	score=0;
-	lives=5;
+	//lives=5;
 }
 
 var line:LineRenderer;
 function Update () {
+	
+	checkLives();
+	
+	if (lives <= 0)
+	{
+		Application.LoadLevel("level1");
+	}
 	
 	//get the SCREEN position of the mouse
 	var mousePos = Input.mousePosition;

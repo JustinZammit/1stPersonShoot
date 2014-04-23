@@ -1,8 +1,12 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\cursorController.js">
     <Files>
-      <File FileName="Assets\scripts\cursorController.js" Line="24" Column="1" />
+      <File FileName="Assets\scripts\cursorController.js" Line="36" Column="35" />
+      <File FileName="Assets\scripts\healthController.js" Line="6" Column="85" />
+      <File FileName="..\..\..\Desktop\School\UnityForMe\NauseaGame\Assets\scripts\level1Controller.js" Line="5" Column="91" />
+      <File FileName="..\..\..\Desktop\School\UnityForMe\NauseaGame\Assets\scripts\Level1Start.js" Line="1" Column="1" />
+      <File FileName="..\..\..\Desktop\School\UnityForMe\NauseaGame\Assets\scripts\PlayerController.js" Line="14" Column="21" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
