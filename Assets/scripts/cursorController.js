@@ -1,9 +1,27 @@
 ﻿#pragma strict
 
+var score:int;
+var lives:int;
+var text:GUISkin;
+
+function OnGUI()
+{
+	GUI.skin=text;
+	//label used to show score
+	GUI.Label(Rect(10,5,100,50),"Score: "+score);
+	GUI.Label(Rect(10,20,100,50),"Lives: "+lives);
+	GUI.Label(Rect(10,35,100,50),"Difficulty: "+Application.loadedLevelName);
+
+}
+
+
 function Start () {
 	Screen.showCursor = false;
+	score=0;
+	lives=5;
 }
-	var line:LineRenderer;
+
+var line:LineRenderer;
 function Update () {
 	
 	//get the SCREEN position of the mouse
@@ -45,11 +63,14 @@ function Update () {
 			//for example to only destroy objects tagged 'cube'
 			if ((hit.collider.gameObject.tag == "enemyUfo") || (hit.collider.gameObject.tag == "enemyGround"))
 			{
+			
+			score=score+1;
 			//destroy the cube
 			Destroy(hit.collider.gameObject);
 			//Exercise 2: implement score for the player 
 			}
 		}
 	}
+	
 	
 }
