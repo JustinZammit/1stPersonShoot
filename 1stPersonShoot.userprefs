@@ -1,13 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\objectMovement.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\powersController.js">
     <Files>
-      <File FileName="Assets\scripts\objectMovement.js" Line="12" Column="70" />
-      <File FileName="Assets\scripts\cursorController.js" Line="1" Column="1" />
+      <File FileName="Assets\scripts\cursorController.js" Line="87" Column="90" />
+      <File FileName="Assets\scripts\objectGen.js" Line="3" Column="27" />
+      <File FileName="Assets\scripts\objectMovement.js" Line="17" Column="2" />
+      <File FileName="Assets\scripts\powersController.js" Line="15" Column="3" />
       <File FileName="Assets\scripts\healthController.js" Line="1" Column="1" />
-      <File FileName="..\..\..\Desktop\School\UnityForMe\NauseaGame\Assets\scripts\level1Controller.js" Line="1" Column="1" />
-      <File FileName="..\..\..\Desktop\School\UnityForMe\NauseaGame\Assets\scripts\Level1Start.js" Line="1" Column="1" />
-      <File FileName="..\..\..\Desktop\School\UnityForMe\NauseaGame\Assets\scripts\PlayerController.js" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

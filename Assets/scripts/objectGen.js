@@ -17,6 +17,7 @@ function generateUfo()
 }
 
 
+
 function Start () {
 	//generate one object per second
 	yield StartCoroutine("generateUfo");

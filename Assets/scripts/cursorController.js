@@ -52,7 +52,6 @@ function Update () {
 	if (Input.GetMouseButtonDown(0))
 	{
 		
-		Debug.Log("click");
 		
 		//casts a ray out from the mouse position out into the 3d world
 		var ray = Camera.main.ScreenPointToRay(mousePos);
@@ -79,8 +78,18 @@ function Update () {
 			score=score+1;
 			//destroy the cube
 			Destroy(hit.collider.gameObject);
-			//Exercise 2: implement score for the player 
+			
 			}
+			
+			if (hit.collider.gameObject.tag == "health")
+			{
+			
+			lives=GameObject.FindGameObjectWithTag("healthReduce").GetComponent(healthController).lives++;
+			//destroy the cube
+			Destroy(hit.collider.gameObject);
+			
+			}
+			
 		}
 	}
 	

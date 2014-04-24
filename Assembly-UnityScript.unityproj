@@ -50,6 +50,7 @@
      <Compile Include="Assets\scripts\healthController.js" />
      <Compile Include="Assets\scripts\objectGen.js" />
      <Compile Include="Assets\scripts\objectMovement.js" />
+     <Compile Include="Assets\scripts\powersController.js" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
   </ItemGroup>
   <ItemGroup>
