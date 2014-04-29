@@ -4,6 +4,7 @@ var score:int;
 var lives:int;
 var shield:int;
 var text:GUISkin;
+var enemyLives:int;
 
 function OnGUI()
 {
@@ -15,6 +16,8 @@ function OnGUI()
 	GUI.Label(Rect(10,50,100,50),"Difficulty: "+Application.loadedLevelName);
 
 }
+
+
 
 function checkLives()
 {
@@ -45,6 +48,30 @@ function Update () {
 	{
 		Application.LoadLevel("level1");
 	}
+	if (GameObject.FindGameObjectWithTag("cursor").GetComponent(cursorController).score>=10)
+	{
+		
+		if (Input.GetKeyDown (KeyCode.E))
+		{
+				GameObject.FindGameObjectWithTag("shield").transform.position = Vector3(0.28285, -24.1227, -8.31573);
+				GameObject.FindGameObjectWithTag("BazookaAim").transform.position = Vector3(0.01, 0.0009961128, -7.202566);
+				
+				if(Input.GetKeyDown(KeyCode.Space))
+				{
+					//enemyLives= GameObject.FindGameObjectWithTag("enemyGround").GetComponent(enemyLives);
+					//enemyLives=enemyLives--;
+					lives=lives--;
+				}
+				
+		}
+		
+	}
+	
+	if (Input.GetKeyDown (KeyCode.A))
+	{
+		GameObject.FindGameObjectWithTag("BazookaAim").transform.position = Vector3(-0.02199376, -7, -7.202566);
+	}
+
 	
 	//get the SCREEN position of the mouse
 	var mousePos = Input.mousePosition;

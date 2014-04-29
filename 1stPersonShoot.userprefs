@@ -1,6 +1,13 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\shieldController.js">
+    <Files>
+      <File FileName="Assets\scripts\cursorController.js" Line="57" Column="112" />
+      <File FileName="Assets\scripts\shieldController.js" Line="37" Column="109" />
+      <File FileName="Assets\scripts\objectGen.js" Line="1" Column="1" />
+      <File FileName="Assets\scripts\enemyLives.js" Line="3" Column="8" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
