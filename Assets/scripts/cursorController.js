@@ -2,6 +2,7 @@
 
 var score:int;
 var lives:int;
+var shield:int;
 var text:GUISkin;
 
 function OnGUI()
@@ -10,13 +11,21 @@ function OnGUI()
 	//label used to show score
 	GUI.Label(Rect(10,5,100,50),"Score: "+score);
 	GUI.Label(Rect(10,20,100,50),"Lives: "+lives);
-	GUI.Label(Rect(10,35,100,50),"Difficulty: "+Application.loadedLevelName);
+	GUI.Label(Rect(10,35,100,50),"Shield: "+shield);
+	GUI.Label(Rect(10,50,100,50),"Difficulty: "+Application.loadedLevelName);
 
 }
 
 function checkLives()
 {
 	lives = GameObject.FindGameObjectWithTag("healthReduce").GetComponent(healthController).lives;
+}
+function checkShield()
+{
+	if (GameObject.FindGameObjectWithTag("shield")!=null)
+	{
+	shield = GameObject.FindGameObjectWithTag("shield").GetComponent(shieldController).shield;
+	}
 }
 
 function Start () {
@@ -30,6 +39,7 @@ var line:LineRenderer;
 function Update () {
 	
 	checkLives();
+	checkShield();
 	
 	if (lives <= 0)
 	{

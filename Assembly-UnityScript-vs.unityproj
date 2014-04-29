@@ -51,6 +51,7 @@
      <Compile Include="Assets\scripts\objectGen.js" />
      <Compile Include="Assets\scripts\objectMovement.js" />
      <Compile Include="Assets\scripts\powersController.js" />
+     <Compile Include="Assets\scripts\shieldController.js" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
  <Reference Include="Assembly-UnityScript-firstpass">
  <HintPath>Library\ScriptAssemblies\Assembly-UnityScript-firstpass.dll</HintPath>
