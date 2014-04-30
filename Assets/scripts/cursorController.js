@@ -30,11 +30,15 @@ function checkShield()
 	shield = GameObject.FindGameObjectWithTag("shield").GetComponent(shieldController).shield;
 	}
 }
-
+var canShootBazooka:boolean;
+	var bazookaAmmo:int;
 function Start () {
 
 	Screen.showCursor = false;
 	score=0;
+	canShootBazooka = false;
+	
+		bazookaAmmo=2;
 	//lives=5;
 }
 
@@ -43,6 +47,9 @@ function Update () {
 	
 	checkLives();
 	checkShield();
+	
+	
+	
 	
 	if (lives <= 0)
 	{
@@ -53,24 +60,52 @@ function Update () {
 		
 		if (Input.GetKeyDown (KeyCode.E))
 		{
-				GameObject.FindGameObjectWithTag("shield").transform.position = Vector3(0.28285, -24.1227, -8.31573);
-				GameObject.FindGameObjectWithTag("BazookaAim").transform.position = Vector3(0.01, 0.0009961128, -7.202566);
 				
+				if (bazookaAmmo > 0)
+				{
+				GameObject.FindGameObjectWithTag("BazookaAim").transform.position = Vector3(0.01, 0.0009961128, -7.202566);
+				GameObject.FindGameObjectWithTag("shield").transform.position = Vector3(0.28285, -24.1227, -12.1722);
+				GameObject.FindGameObjectWithTag("shield2").transform.position = Vector3(0.28285, -24.1227, -8.31573);
+				
+				canShootBazooka = true;
+				Debug.Log(canShootBazooka);
+				}
+		}
+		
+	
+								
 				if(Input.GetKeyDown(KeyCode.Space))
 				{
+					bazookaAmmo--;
+					if (canShootBazooka)
+					{
+					
+					var enemyArray1:GameObject[];
+					var enemyArray2:GameObject[];
+					
+					enemyArray1 = GameObject.FindGameObjectsWithTag("enemyGround");
+					enemyArray2 = GameObject.FindGameObjectsWithTag("enemyUfo");
+					
+					for (var enemy:GameObject in enemyArray1)
+					{
+						Destroy(enemy);
+					}
+					
+					for (var enemy:GameObject in enemyArray2)
+					{
+						Destroy(enemy);
+					}
+
 					//enemyLives= GameObject.FindGameObjectWithTag("enemyGround").GetComponent(enemyLives);
 					//enemyLives=enemyLives--;
-					lives=lives--;
+					GameObject.FindGameObjectWithTag("healthReduce").GetComponent(healthController).lives--;
+					}
 				}
 				
 		}
 		
-	}
 	
-	if (Input.GetKeyDown (KeyCode.A))
-	{
-		GameObject.FindGameObjectWithTag("BazookaAim").transform.position = Vector3(-0.02199376, -7, -7.202566);
-	}
+	
 
 	
 	//get the SCREEN position of the mouse
@@ -117,6 +152,19 @@ function Update () {
 			Destroy(hit.collider.gameObject);
 			
 			}
+			if (hit.collider.gameObject.tag == "boss")
+			{
+				if (GameObject.FindGameObjectWithTag("boss")!=null)
+				{		
+					GameObject.FindGameObjectWithTag("boss").GetComponent(bossHealthController).bossHealth--;
+					
+					if(GameObject.FindGameObjectWithTag("boss").GetComponent(bossHealthController).bossHealth<=0)
+					{
+						Destroy(hit.collider.gameObject);
+					}
+				}
+			
+			}
 			
 			if (hit.collider.gameObject.tag == "health")
 			{
@@ -129,6 +177,6 @@ function Update () {
 			
 		}
 	}
+	}
 	
 	
-}
