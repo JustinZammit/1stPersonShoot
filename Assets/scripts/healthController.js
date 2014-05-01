@@ -9,6 +9,14 @@ function OnTriggerEnter(other: Collider){
     
     Debug.Log(lives);
   }
+  
+  if (other.gameObject.tag == "boss"){
+    // this rigidbody or CharacterController entered a trigger tagged Wall
+    lives=lives-100;
+    
+    Debug.Log(lives);
+  }
+  
 }
 
 function Start () {

@@ -38,7 +38,7 @@ function Start () {
 	score=0;
 	canShootBazooka = false;
 	
-		bazookaAmmo=2;
+	bazookaAmmo=2;
 	//lives=5;
 }
 
@@ -82,18 +82,28 @@ function Update () {
 					
 					var enemyArray1:GameObject[];
 					var enemyArray2:GameObject[];
+					var enemyArray3:GameObject[];
 					
 					enemyArray1 = GameObject.FindGameObjectsWithTag("enemyGround");
 					enemyArray2 = GameObject.FindGameObjectsWithTag("enemyUfo");
+					enemyArray3 = GameObject.FindGameObjectsWithTag("boss");
 					
 					for (var enemy:GameObject in enemyArray1)
 					{
 						Destroy(enemy);
+						score++;
 					}
 					
 					for (var enemy:GameObject in enemyArray2)
 					{
 						Destroy(enemy);
+						score++;
+					}
+					
+					for (var enemy:GameObject in enemyArray3)
+					{
+						Destroy(enemy);
+						score++;
 					}
 
 					//enemyLives= GameObject.FindGameObjectWithTag("enemyGround").GetComponent(enemyLives);
@@ -161,6 +171,7 @@ function Update () {
 					if(GameObject.FindGameObjectWithTag("boss").GetComponent(bossHealthController).bossHealth<=0)
 					{
 						Destroy(hit.collider.gameObject);
+						score++;
 					}
 				}
 			
