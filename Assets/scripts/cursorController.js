@@ -13,7 +13,8 @@ function OnGUI()
 	GUI.Label(Rect(10,5,100,50),"Score: "+score);
 	GUI.Label(Rect(10,20,100,50),"Lives: "+lives);
 	GUI.Label(Rect(10,35,100,50),"Shield: "+shield);
-	GUI.Label(Rect(10,50,100,50),"Difficulty: "+Application.loadedLevelName);
+	GUI.Label(Rect(10,50,100,50),"Bazooka: "+bazookaAmmo);
+	GUI.Label(Rect(10,65,100,50),"Difficulty: "+Application.loadedLevelName);
 
 }
 
@@ -58,28 +59,34 @@ function Update () {
 	if (GameObject.FindGameObjectWithTag("cursor").GetComponent(cursorController).score>=10)
 	{
 		
-		if (Input.GetKeyDown (KeyCode.E))
+		if ((Input.GetKeyDown (KeyCode.E)) && (bazookaAmmo>=1))
 		{
 				
-				if (bazookaAmmo > 0)
-				{
-				GameObject.FindGameObjectWithTag("BazookaAim").transform.position = Vector3(0.01, 0.0009961128, -7.202566);
-				GameObject.FindGameObjectWithTag("shield").transform.position = Vector3(0.28285, -24.1227, -12.1722);
-				GameObject.FindGameObjectWithTag("shield2").transform.position = Vector3(0.28285, -24.1227, -8.31573);
+			
+					GameObject.FindGameObjectWithTag("BazookaAim").transform.position = Vector3(0.01, 0.0009961128, -7.202566);
+					GameObject.FindGameObjectWithTag("shield").transform.position = Vector3(0.28285, -24.1227, -12.1722);
+					GameObject.FindGameObjectWithTag("shield2").transform.position = Vector3(0.28285, -24.1227, -8.31573);
+					
+					canShootBazooka = true;
+					//Debug.Log(canShootBazooka);	
 				
-				canShootBazooka = true;
-				Debug.Log(canShootBazooka);
-				}
+				
+				
 		}
-		
+			
+		if (bazookaAmmo <= 0)
+		{
+				GameObject.FindGameObjectWithTag("BazookaAim").transform.position = Vector3(0.01, -7.230994, -7.202566);
+									
+				canShootBazooka = false;
+				//Debug.Log(canShootBazooka);
+		}
 	
 								
-				if(Input.GetKeyDown(KeyCode.Space))
-				{
+		if((Input.GetKeyDown(KeyCode.Space)) && (canShootBazooka) && (bazookaAmmo>=1))
+			{
 					bazookaAmmo--;
-					if (canShootBazooka)
-					{
-					
+										
 					var enemyArray1:GameObject[];
 					var enemyArray2:GameObject[];
 					var enemyArray3:GameObject[];
@@ -109,8 +116,8 @@ function Update () {
 					//enemyLives= GameObject.FindGameObjectWithTag("enemyGround").GetComponent(enemyLives);
 					//enemyLives=enemyLives--;
 					GameObject.FindGameObjectWithTag("healthReduce").GetComponent(healthController).lives--;
-					}
-				}
+			}
+				
 				
 		}
 		
@@ -180,10 +187,19 @@ function Update () {
 			if (hit.collider.gameObject.tag == "health")
 			{
 			
-			lives=GameObject.FindGameObjectWithTag("healthReduce").GetComponent(healthController).lives++;
-			//destroy the cube
-			Destroy(hit.collider.gameObject);
+				lives=GameObject.FindGameObjectWithTag("healthReduce").GetComponent(healthController).lives++;
+				//destroy the cube
+				Destroy(hit.collider.gameObject);
 			
+			}
+			if (hit.collider.gameObject.tag == "refillAmmo")
+			{
+			
+				GameObject.FindGameObjectWithTag("shield").GetComponent(shieldController).shield++;
+				bazookaAmmo++;
+				//destroy the cube
+				Destroy(hit.collider.gameObject);
+				
 			}
 			
 		}

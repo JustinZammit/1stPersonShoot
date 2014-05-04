@@ -46,7 +46,6 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\scripts\bossGen.js" />
      <Compile Include="Assets\scripts\bossHealthController.js" />
      <Compile Include="Assets\scripts\cursorController.js" />
      <Compile Include="Assets\scripts\generateAmmo.js" />
