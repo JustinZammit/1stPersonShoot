@@ -1,0 +1,61 @@
+Initialize engine version: 4.3.4f1 (e444f76e01cd)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 9.0c [igdumd32.dll 8.15.10.1749]
+    Renderer: Intel(R) G41 Express Chipset (Microsoft Corporation - WDDM 1.1)
+    Vendor:   Intel
+    VRAM:     847 MB (via DXGI)
+    Caps:     Shader=30 DepthRT=1 NativeDepth=0 NativeShadow=1 DF16=0 INTZ=0 RAWZ=0 NULL=0 RESZ=0 SlowINTZ=0
+Begin MonoManager ReloadAssembly
+Platform assembly: E:\School\UnityForMe\1stPersonShoot\AlienDefence_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading E:\School\UnityForMe\1stPersonShoot\AlienDefence_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: E:\School\UnityForMe\1stPersonShoot\AlienDefence_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading E:\School\UnityForMe\1stPersonShoot\AlienDefence_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: E:\School\UnityForMe\1stPersonShoot\AlienDefence_Data\Managed\Assembly-UnityScript-firstpass.dll (this message is harmless)
+Loading E:\School\UnityForMe\1stPersonShoot\AlienDefence_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
+Platform assembly: E:\School\UnityForMe\1stPersonShoot\AlienDefence_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading E:\School\UnityForMe\1stPersonShoot\AlienDefence_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+- Completed reload, in  0.147 seconds
+desktop: 1024x768 85Hz; virtual: 1024x768 at 0,0
+<RI> Initializing input.
+XInput1_3.dll not found.
+<RI> Input initialized.
+Platform assembly: E:\School\UnityForMe\1stPersonShoot\AlienDefence_Data\Managed\Boo.Lang.dll (this message is harmless)
+UnloadTime: 0.380543 ms
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 83.
+Total: 0.771071 ms (FindLiveObjects: 0.011903 ms CreateObjectMapping: 0.010367 ms MarkObjects: 0.085247 ms  DeleteObjects: 0.014975 ms)
+
+UnloadTime: 0.462719 ms
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 5685.
+Total: 1.222654 ms (FindLiveObjects: 0.247679 ms CreateObjectMapping: 0.046847 ms MarkObjects: 0.177791 ms  DeleteObjects: 0.030719 ms)
+
+4
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
+3
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
+2
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
+1
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
+0
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
+UnloadTime: 9.180280 ms
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 964 unused Assets to reduce memory usage. Loaded Objects now: 124.
+Total: 2.894205 ms (FindLiveObjects: 0.031871 ms CreateObjectMapping: 0.033791 ms MarkObjects: 0.141311 ms  DeleteObjects: 2.036734 ms)
+

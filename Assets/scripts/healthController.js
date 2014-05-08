@@ -14,7 +14,7 @@ function OnTriggerEnter(other: Collider){
     // this rigidbody or CharacterController entered a trigger tagged Wall
     lives=lives-100;
     
-    Debug.Log(lives);
+   // Debug.Log(lives);
   }
   
 }

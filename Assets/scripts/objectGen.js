@@ -2,6 +2,7 @@
 var enemyUfo:Rigidbody;
 var enemyGround:Rigidbody;
 var boss:Rigidbody;
+var bullet:Rigidbody;
 
 function generateUfo()
 {
@@ -33,13 +34,24 @@ function generateUfo()
 	
 }
 
+function generateBullet()
+{
+	if (GameObject.FindGameObjectWithTag("enemyGround")!=null)
+	{
+		Instantiate (bullet, Vector3(transform.position.x, transform.position.y,transform.position.z), transform.rotation);
+		yield WaitForSeconds(1.0);
+	}
+}
 
 
 function Start () {
 	//generate one object per second
 	yield StartCoroutine("generateUfo");
+	yield StartCoroutine("generateBullet");
 }
 
 function Update () {
+
+	
 	
 }

@@ -18,6 +18,14 @@ function OnGUI()
 
 }
 
+function checkGameTime()
+{
+
+				Time.timeScale=0.2;
+				yield WaitForSeconds(1.2);
+				Time.timeScale=1.0;
+	
+}
 
 
 function checkLives()
@@ -34,6 +42,8 @@ function checkShield()
 var canShootBazooka:boolean;
 	var bazookaAmmo:int;
 function Start () {
+	
+	//yield StartCoroutine("checkGameTime");
 
 	Screen.showCursor = false;
 	score=0;
@@ -50,16 +60,20 @@ function Update () {
 	checkShield();
 	
 	
+	if ((score>0) && (score%10==0))
+	{
+		Time.timeScale=Time.timeScale+0.002;
+	}
 	
 	
 	if (lives <= 0)
 	{
-		Application.LoadLevel("level1");
+		Application.LoadLevel("Menu");
 	}
 	if (GameObject.FindGameObjectWithTag("cursor").GetComponent(cursorController).score>=10)
 	{
 		
-		if ((Input.GetKeyDown (KeyCode.E)) && (bazookaAmmo>=1))
+		if (((Input.GetKeyDown (KeyCode.LeftAlt)) || (Input.GetKeyDown (KeyCode.E))) && (bazookaAmmo>=1))
 		{
 				
 			
@@ -175,6 +189,10 @@ function Update () {
 				{		
 					GameObject.FindGameObjectWithTag("boss").GetComponent(bossHealthController).bossHealth--;
 					
+					//Debug.Log("Boss Texture test");
+				    // yield WaitForSeconds(0.6);
+					//renderer.material.mainTexture = Resources.Load("enemyBullets");
+					
 					if(GameObject.FindGameObjectWithTag("boss").GetComponent(bossHealthController).bossHealth<=0)
 					{
 						Destroy(hit.collider.gameObject);
@@ -202,8 +220,15 @@ function Update () {
 				
 			}
 			
+			if (hit.collider.gameObject.tag == "slowTime")
+			{
+				Destroy(hit.collider.gameObject);
+				checkGameTime();
+			}
+			
+			
 		}
 	}
-	}
+}
 	
 	

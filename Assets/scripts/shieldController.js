@@ -8,7 +8,17 @@ function OnTriggerEnter(other: Collider){
     // this rigidbody or CharacterController entered a trigger tagged Wall
     Destroy(other.gameObject);
     shield=shield-1;
+   // gameObject.GetComponent(SpriteRenderer).sprite = Resources.Load("enemyBullets.png"); 
+    Debug.Log("Shield test");
+    // yield WaitForSeconds(0.6);
+    var currentImage:Sprite;
+    currentImage = GameObject.FindGameObjectWithTag("shield2").GetComponent(SpriteRenderer).sprite;
     
+    var newImage:Sprite;
+					newImage = Resources.Load("shieldDamaged",Sprite); 
+					GameObject.FindGameObjectWithTag("shield2").GetComponent(SpriteRenderer).sprite = newImage;
+ 				    yield WaitForSeconds(0.6);
+    				GameObject.FindGameObjectWithTag("shield2").GetComponent(SpriteRenderer).sprite = currentImage;
   }
 }
 
@@ -17,8 +27,7 @@ function OnTriggerEnter(other: Collider){
 
 function Start () {
 
-//yield StartCoroutine("enableShield");
-shield=2;
+shield=3;
 
 }
 
