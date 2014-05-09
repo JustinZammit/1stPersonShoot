@@ -1,9 +1,9 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\shieldController.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\StoryController.js">
     <Files>
-      <File FileName="Assets\scripts\cursorController.js" Line="76" Column="7" />
-      <File FileName="Assets\scripts\shieldController.js" Line="7" Column="14" />
+      <File FileName="Assets\scripts\StoryController.js" Line="14" Column="21" />
+      <File FileName="Assets\scripts\cursorController.js" Line="41" Column="25" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

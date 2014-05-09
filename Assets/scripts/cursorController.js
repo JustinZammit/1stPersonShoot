@@ -14,7 +14,6 @@ function OnGUI()
 	GUI.Label(Rect(10,20,100,50),"Lives: "+lives);
 	GUI.Label(Rect(10,35,100,50),"Shield: "+shield);
 	GUI.Label(Rect(10,50,100,50),"Bazooka: "+bazookaAmmo);
-	GUI.Label(Rect(10,65,100,50),"Difficulty: "+Application.loadedLevelName);
 
 }
 
@@ -136,7 +135,10 @@ function Update () {
 		}
 		
 	
-	
+		if(Input.GetKeyDown(KeyCode.Escape))
+		{
+			Application.LoadLevel("Menu");
+		}
 
 	
 	//get the SCREEN position of the mouse
