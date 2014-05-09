@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\scripts\PlayGameButton.js" />
      <Compile Include="Assets\scripts\StoryController.js" />
      <Compile Include="Assets\scripts\bossGen.js" />
      <Compile Include="Assets\scripts\bossHealthController.js" />
@@ -54,12 +55,16 @@
      <Compile Include="Assets\scripts\cursorController.js" />
      <Compile Include="Assets\scripts\enemyLives.js" />
      <Compile Include="Assets\scripts\generateAmmo.js" />
-     <Compile Include="Assets\scripts\goToLevel1.js" />
+     <Compile Include="Assets\scripts\gotoStory.js" />
      <Compile Include="Assets\scripts\healthController.js" />
+     <Compile Include="Assets\scripts\instructionButton.js" />
+     <Compile Include="Assets\scripts\instructionsPageController.js" />
      <Compile Include="Assets\scripts\objectGen.js" />
      <Compile Include="Assets\scripts\objectMovement.js" />
      <Compile Include="Assets\scripts\powersController.js" />
+     <Compile Include="Assets\scripts\quitGameButton.js" />
      <Compile Include="Assets\scripts\shieldController.js" />
+     <Compile Include="Assets\scripts\showScore.js" />
      <None Include="Assets\Standard Assets\Skyboxes\_skybox info.txt" />
  <Reference Include="Assembly-UnityScript-firstpass">
  <HintPath>Library\ScriptAssemblies\Assembly-UnityScript-firstpass.dll</HintPath>

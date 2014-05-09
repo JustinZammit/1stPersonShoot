@@ -3,9 +3,9 @@
 
 function OnMouseDown()
 {
-	if (Application.loadedLevelName == "Menu")
+	if (Application.loadedLevelName == "instructions")
 	{
-		Application.LoadLevel("Level1");
+		Application.LoadLevel("Menu");
 	}
 }
 
@@ -26,4 +26,9 @@ yield StartCoroutine ("loadMenu");
 
 function Update () {
 
+	if ((Application.loadedLevelName == "instructions") &&(Input.GetKeyDown(KeyCode.Escape)))
+		{
+			Application.LoadLevel("Menu");
+		}	
+	
 }

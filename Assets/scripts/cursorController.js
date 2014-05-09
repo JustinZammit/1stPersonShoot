@@ -5,6 +5,7 @@ var lives:int;
 var shield:int;
 var text:GUISkin;
 var enemyLives:int;
+var latestScore:int;
 
 function OnGUI()
 {
@@ -67,6 +68,7 @@ function Update () {
 	
 	if (lives <= 0)
 	{
+		latestScore = score;
 		Application.LoadLevel("Menu");
 	}
 	if (GameObject.FindGameObjectWithTag("cursor").GetComponent(cursorController).score>=10)
@@ -227,7 +229,7 @@ function Update () {
 				Destroy(hit.collider.gameObject);
 				checkGameTime();
 			}
-			
+
 			
 		}
 	}

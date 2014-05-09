@@ -1,9 +1,12 @@
 ﻿<Properties>
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\StoryController.js">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\quitGameButton.js">
     <Files>
-      <File FileName="Assets\scripts\StoryController.js" Line="14" Column="21" />
-      <File FileName="Assets\scripts\cursorController.js" Line="41" Column="25" />
+      <File FileName="Assets\scripts\PlayGameButton.js" Line="12" Column="87" />
+      <File FileName="Assets\scripts\instructionsPageController.js" Line="1" Column="1" />
+      <File FileName="Assets\scripts\gotoStory.js" Line="1" Column="1" />
+      <File FileName="Assets\scripts\instructionButton.js" Line="12" Column="86" />
+      <File FileName="Assets\scripts\quitGameButton.js" Line="17" Column="20" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
