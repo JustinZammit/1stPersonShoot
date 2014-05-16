@@ -25,7 +25,7 @@ function playStory()
 			GameObject.FindGameObjectWithTag("story3").transform.position = Vector3(-0.6872692, 0.1658974, 133.9988);
 			yield WaitForSeconds(1.5);
 			GameObject.FindGameObjectWithTag("story3").transform.position = Vector3(-0.6872692, 700, 133.9988);
-			GameObject.FindGameObjectWithTag("story4").transform.position = Vector3(-0.6872692, 0.1658974, 133.9988);
+			GameObject.FindGameObjectWithTag("story4").transform.position = Vector3(-0.6872692, 0.1658974, 132.9988);
 			//storyComplete = true;
 						
 			

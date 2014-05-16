@@ -47,6 +47,7 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\scripts\PlayGameButton.js" />
+     <Compile Include="Assets\scripts\SoundInMenu.js" />
      <Compile Include="Assets\scripts\StoryController.js" />
      <Compile Include="Assets\scripts\bossGen.js" />
      <Compile Include="Assets\scripts\bossHealthController.js" />
@@ -54,6 +55,7 @@
      <Compile Include="Assets\scripts\bulletMovement.js" />
      <Compile Include="Assets\scripts\cursorController.js" />
      <Compile Include="Assets\scripts\enemyLives.js" />
+     <Compile Include="Assets\scripts\explosionController.js" />
      <Compile Include="Assets\scripts\generateAmmo.js" />
      <Compile Include="Assets\scripts\gotoStory.js" />
      <Compile Include="Assets\scripts\healthController.js" />

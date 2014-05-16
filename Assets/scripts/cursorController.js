@@ -5,7 +5,12 @@ var lives:int;
 var shield:int;
 var text:GUISkin;
 var enemyLives:int;
-var latestScore:int;
+var playerscore:int;
+var explosion:Rigidbody;
+
+var grenadeSound:AudioClip;
+var gunSound:AudioClip;
+
 
 function OnGUI()
 {
@@ -18,7 +23,7 @@ function OnGUI()
 
 }
 
-function checkGameTime()
+function changeGameTime()
 {
 
 				Time.timeScale=0.2;
@@ -43,7 +48,7 @@ var canShootBazooka:boolean;
 	var bazookaAmmo:int;
 function Start () {
 	
-	//yield StartCoroutine("checkGameTime");
+	
 
 	Screen.showCursor = false;
 	score=0;
@@ -62,19 +67,19 @@ function Update () {
 	
 	if ((score>0) && (score%10==0))
 	{
-		Time.timeScale=Time.timeScale+0.002;
+		Time.timeScale=Time.timeScale+0.0035;
 	}
 	
 	
 	if (lives <= 0)
 	{
-		latestScore = score;
+		PlayerPrefs.SetInt("Playerscore", score);
 		Application.LoadLevel("Menu");
 	}
 	if (GameObject.FindGameObjectWithTag("cursor").GetComponent(cursorController).score>=10)
 	{
 		
-		if (((Input.GetKeyDown (KeyCode.LeftAlt)) || (Input.GetKeyDown (KeyCode.E))) && (bazookaAmmo>=1))
+		if ((Input.GetKeyDown (KeyCode.E)) && (bazookaAmmo>=1))
 		{
 				
 			
@@ -84,6 +89,12 @@ function Update () {
 					
 					canShootBazooka = true;
 					//Debug.Log(canShootBazooka);	
+					
+					// guns
+					GameObject.FindGameObjectWithTag("pistol4").transform.position = Vector3(0.7007771,-7, -8.694506);
+					GameObject.FindGameObjectWithTag("pistol3").transform.position = Vector3(1.60659,-7, -6.644174);
+					GameObject.FindGameObjectWithTag("pistol2").transform.position = Vector3(2.518723, -7, -6.290473);
+					GameObject.FindGameObjectWithTag("pistol2.5").transform.position = Vector3(-2.658708, -7, -6.290473);
 				
 				
 				
@@ -100,6 +111,8 @@ function Update () {
 								
 		if((Input.GetKeyDown(KeyCode.Space)) && (canShootBazooka) && (bazookaAmmo>=1))
 			{
+					GetComponent(AudioSource).PlayClipAtPoint(grenadeSound,transform.position);
+			
 					bazookaAmmo--;
 										
 					var enemyArray1:GameObject[];
@@ -114,18 +127,23 @@ function Update () {
 					{
 						Destroy(enemy);
 						score++;
+
 					}
 					
 					for (var enemy:GameObject in enemyArray2)
 					{
 						Destroy(enemy);
 						score++;
+						
+
 					}
 					
 					for (var enemy:GameObject in enemyArray3)
 					{
 						Destroy(enemy);
 						score++;
+						
+
 					}
 
 					//enemyLives= GameObject.FindGameObjectWithTag("enemyGround").GetComponent(enemyLives);
@@ -159,7 +177,7 @@ function Update () {
 	if (Input.GetMouseButtonDown(0))
 	{
 		
-		
+		GetComponent(AudioSource).PlayClipAtPoint(gunSound,transform.position);
 		//casts a ray out from the mouse position out into the 3d world
 		var ray = Camera.main.ScreenPointToRay(mousePos);
 	
@@ -167,8 +185,13 @@ function Update () {
 		//each hit returns a raycast hit
 		var hit:RaycastHit;
 		
-		
-		
+		/*var xpos:int;
+		var ypos:int;
+		var zpos:int;
+		xpos = GameObject.FindGameObjectWithTag("enemyGround").transform.position.x;
+		ypos = GameObject.FindGameObjectWithTag("enemyGround").transform.position.y;
+		zpos = GameObject.FindGameObjectWithTag("enemyGround").transform.position.z;
+		*/
 		//method that generates the laser
 		if (Physics.Raycast (ray, hit)) {
 			//draw a line
@@ -184,7 +207,33 @@ function Update () {
 			
 			score=score+1;
 			//destroy the cube
+			var target = hit.collider.gameObject.transform.position;
+			
+			Debug.Log(target);
+			
+			target.y += 0.2;
+			
+			var myExplosion:Rigidbody;
+			
+			myExplosion = Instantiate(explosion, target, transform.rotation);
+			GetComponent(AudioSource).PlayClipAtPoint(grenadeSound,target);
+			
+			if (target.z > 30)
+			{
+			//biggest
+				myExplosion.transform.localScale.x = 5;
+				myExplosion.transform.localScale.y = 5;
+			}
+			
+			if (target.z > 20)
+			{
+			//big
+				myExplosion.transform.localScale.x = 2.5;
+				myExplosion.transform.localScale.y = 2.5;
+			}
+			
 			Destroy(hit.collider.gameObject);
+			
 			
 			}
 			if (hit.collider.gameObject.tag == "boss")
@@ -201,6 +250,8 @@ function Update () {
 					{
 						Destroy(hit.collider.gameObject);
 						score++;
+						Instantiate(explosion, transform.position, transform.rotation);
+						GetComponent(AudioSource).PlayClipAtPoint(grenadeSound,target);
 					}
 				}
 			
@@ -227,12 +278,44 @@ function Update () {
 			if (hit.collider.gameObject.tag == "slowTime")
 			{
 				Destroy(hit.collider.gameObject);
-				checkGameTime();
+				changeGameTime();
 			}
+			
+			
 
 			
 		}
 	}
+	
+			if (Input.GetKeyDown (KeyCode.Q))
+			{	//guns
+				GameObject.FindGameObjectWithTag("pistol2").transform.position = Vector3(2.518723, -1.730917, -6.290473);
+				GameObject.FindGameObjectWithTag("pistol2.5").transform.position = Vector3(-2.658708, -1.730917, -6.290473);
+				GameObject.FindGameObjectWithTag("pistol3").transform.position = Vector3(1.60659,-7, -6.644174);
+				GameObject.FindGameObjectWithTag("pistol4").transform.position = Vector3(0.7007771,-7, -8.694506);
+			}
+			
+			if (Input.GetKeyDown (KeyCode.LeftAlt))
+			{	
+				
+				//guns
+				GameObject.FindGameObjectWithTag("pistol3").transform.position = Vector3(1.60659,-1.618149, -6.644174);
+				
+				GameObject.FindGameObjectWithTag("pistol2").transform.position = Vector3(2.518723, -7, -6.290473);
+				GameObject.FindGameObjectWithTag("pistol2.5").transform.position = Vector3(-2.658708, -7, -6.290473);
+				GameObject.FindGameObjectWithTag("pistol4").transform.position = Vector3(0.7007771,-7, -8.694506);
+			}
+			if (Input.GetKeyDown (KeyCode.RightAlt))
+			{	
+				
+				//guns
+				GameObject.FindGameObjectWithTag("pistol4").transform.position = Vector3(0.7007771,-0.5701599, -8.694506);
+				GameObject.FindGameObjectWithTag("pistol3").transform.position = Vector3(1.60659,-7, -6.644174);
+				GameObject.FindGameObjectWithTag("pistol2").transform.position = Vector3(2.518723, -7, -6.290473);
+				GameObject.FindGameObjectWithTag("pistol2.5").transform.position = Vector3(-2.658708, -7, -6.290473);
+				
+				
+			}
 }
 	
 	

@@ -1,19 +1,25 @@
 ﻿#pragma strict
 
-var latestScore:int;
-latestScore = GameObject.FindGameObjectWithTag("cursor").GetComponent(cursorController).latestScore;
+var Playerscore:int;
+
 
 function OnGUI()
-{
-	if (latestScore > 0)
-	{
-		GUI.Label(Rect(10,5,100,50),"Last Score: "+latestScore);
-	}
+{		
+		Playerscore = PlayerPrefs.GetInt("Playerscore");
+		if (Playerscore>0)
+		{
+		GUI.Label(Rect(10,5,100,50),"Last Score: "+Playerscore);
+		}
 }
-function Start () {
 
+function Start () {
+	if (Screen.showCursor == false)
+	{
+		Screen.showCursor = true;
+	}
 }
 
 function Update () {
+	
 	
 }
