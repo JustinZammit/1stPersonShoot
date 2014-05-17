@@ -9,7 +9,7 @@ var playerscore:int;
 var explosion:Rigidbody;
 
 var grenadeSound:AudioClip;
-var gunSound:AudioClip;
+//var gunSound:AudioClip;
 
 
 function OnGUI()
@@ -67,7 +67,7 @@ function Update () {
 	
 	if ((score>0) && (score%10==0))
 	{
-		Time.timeScale=Time.timeScale+0.0035;
+		Time.timeScale=Time.timeScale+0.002;
 	}
 	
 	
@@ -176,8 +176,7 @@ function Update () {
 	//if I click the left mouse button once
 	if (Input.GetMouseButtonDown(0))
 	{
-		
-		GetComponent(AudioSource).PlayClipAtPoint(gunSound,transform.position);
+		//GetComponent(AudioSource).PlayClipAtPoint(gunSound,transform.position);
 		//casts a ray out from the mouse position out into the 3d world
 		var ray = Camera.main.ScreenPointToRay(mousePos);
 	
@@ -209,7 +208,7 @@ function Update () {
 			//destroy the cube
 			var target = hit.collider.gameObject.transform.position;
 			
-			Debug.Log(target);
+			//Debug.Log(target);
 			
 			target.y += 0.2;
 			

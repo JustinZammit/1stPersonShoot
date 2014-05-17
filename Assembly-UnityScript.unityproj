@@ -58,6 +58,7 @@
      <Compile Include="Assets\scripts\explosionController.js" />
      <Compile Include="Assets\scripts\generateAmmo.js" />
      <Compile Include="Assets\scripts\gotoStory.js" />
+     <Compile Include="Assets\scripts\gunsController.js" />
      <Compile Include="Assets\scripts\healthController.js" />
      <Compile Include="Assets\scripts\instructionButton.js" />
      <Compile Include="Assets\scripts\instructionsPageController.js" />
