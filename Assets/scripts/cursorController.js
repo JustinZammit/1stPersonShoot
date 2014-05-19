@@ -91,10 +91,10 @@ function Update () {
 					//Debug.Log(canShootBazooka);	
 					
 					// guns
-					GameObject.FindGameObjectWithTag("pistol4").transform.position = Vector3(0.7007771,-7, -8.694506);
-					GameObject.FindGameObjectWithTag("pistol3").transform.position = Vector3(1.60659,-7, -6.644174);
-					GameObject.FindGameObjectWithTag("pistol2").transform.position = Vector3(2.518723, -7, -6.290473);
-					GameObject.FindGameObjectWithTag("pistol2.5").transform.position = Vector3(-2.658708, -7, -6.290473);
+					//GameObject.FindGameObjectWithTag("pistol4").transform.position = Vector3(0.7007771,-7, -8.694506);
+					//GameObject.FindGameObjectWithTag("pistol3").transform.position = Vector3(1.60659,-7, -6.644174);
+					//GameObject.FindGameObjectWithTag("pistol2").transform.position = Vector3(1.565543, -1.276876, -7.302336);
+					//GameObject.FindGameObjectWithTag("pistol2.5").transform.position = Vector3(1.718652, -1.214445, -7.302336);
 				
 				
 				
@@ -288,32 +288,42 @@ function Update () {
 	
 			if (Input.GetKeyDown (KeyCode.Q))
 			{	//guns
-				GameObject.FindGameObjectWithTag("pistol2").transform.position = Vector3(2.518723, -1.730917, -6.290473);
-				GameObject.FindGameObjectWithTag("pistol2.5").transform.position = Vector3(-2.658708, -1.730917, -6.290473);
-				GameObject.FindGameObjectWithTag("pistol3").transform.position = Vector3(1.60659,-7, -6.644174);
-				GameObject.FindGameObjectWithTag("pistol4").transform.position = Vector3(0.7007771,-7, -8.694506);
+				GameObject.FindGameObjectWithTag("pistol2").transform.position = Vector3(1.565543, -1.276876, -7.302336);
+				GameObject.FindGameObjectWithTag("pistol2.5").transform.position = Vector3(1.718652, -1.214445, -7.302336);
+				GameObject.FindGameObjectWithTag("pistol3").transform.position = Vector3(1.914601,-7, -6.644174);
+				GameObject.FindGameObjectWithTag("pistol4").transform.position = Vector3(1.826679,-7, -6.644174);
+				
+				//powerups
+				//GameObject.FindGameObjectWithTag("shield").transform.position = Vector3(0.28285, -24.1227, -12.1722);
+				//GameObject.FindGameObjectWithTag("shield2").transform.position = Vector3(0.28285, -24.1227, -8.31573);
+				GameObject.FindGameObjectWithTag("BazookaAim").transform.position = Vector3(0.01, -7.230994, -7.202566);
+				GameObject.FindGameObjectWithTag("cursor").GetComponent(cursorController).canShootBazooka = false;
 			}
 			
 			if (Input.GetKeyDown (KeyCode.LeftAlt))
 			{	
 				
 				//guns
-				GameObject.FindGameObjectWithTag("pistol3").transform.position = Vector3(1.60659,-1.618149, -6.644174);
+				GameObject.FindGameObjectWithTag("pistol3").transform.position = Vector3(1.914601,-1.521996, -6.644174);
 				
-				GameObject.FindGameObjectWithTag("pistol2").transform.position = Vector3(2.518723, -7, -6.290473);
-				GameObject.FindGameObjectWithTag("pistol2.5").transform.position = Vector3(-2.658708, -7, -6.290473);
-				GameObject.FindGameObjectWithTag("pistol4").transform.position = Vector3(0.7007771,-7, -8.694506);
+				GameObject.FindGameObjectWithTag("pistol2").transform.position = Vector3(1.565543, -7, -7.302336);
+				GameObject.FindGameObjectWithTag("pistol2.5").transform.position = Vector3(1.718652, -7, -7.302336);
+				GameObject.FindGameObjectWithTag("pistol4").transform.position = Vector3(1.826679,-7, -6.644174);
+				
+				GameObject.FindGameObjectWithTag("BazookaAim").transform.position = Vector3(0.01, -7.230994, -7.202566);
+				GameObject.FindGameObjectWithTag("cursor").GetComponent(cursorController).canShootBazooka = false;
 			}
 			if (Input.GetKeyDown (KeyCode.RightAlt))
 			{	
 				
 				//guns
-				GameObject.FindGameObjectWithTag("pistol4").transform.position = Vector3(0.7007771,-0.5701599, -8.694506);
-				GameObject.FindGameObjectWithTag("pistol3").transform.position = Vector3(1.60659,-7, -6.644174);
-				GameObject.FindGameObjectWithTag("pistol2").transform.position = Vector3(2.518723, -7, -6.290473);
-				GameObject.FindGameObjectWithTag("pistol2.5").transform.position = Vector3(-2.658708, -7, -6.290473);
+				GameObject.FindGameObjectWithTag("pistol4").transform.position = Vector3(1.826679,-1.539073, -6.644174);
+				GameObject.FindGameObjectWithTag("pistol3").transform.position = Vector3(1.914601,-7, -6.644174);
+				GameObject.FindGameObjectWithTag("pistol2").transform.position = Vector3(1.565543, -7, -7.302336);
+				GameObject.FindGameObjectWithTag("pistol2.5").transform.position = Vector3(1.718652, -7, -7.302336);
 				
-				
+				GameObject.FindGameObjectWithTag("BazookaAim").transform.position = Vector3(0.01, -7.230994, -7.202566);
+				GameObject.FindGameObjectWithTag("cursor").GetComponent(cursorController).canShootBazooka = false;
 			}
 }
 	

@@ -7,28 +7,28 @@ Direct3D:
     VRAM:     977 MB (via DXGI)
     Caps:     Shader=30 DepthRT=1 NativeDepth=1 NativeShadow=1 DF16=0 INTZ=1 RAWZ=0 NULL=1 RESZ=0 SlowINTZ=0
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\Miguel\Desktop\1stPersonShoot\AlienDefence_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\Miguel\Desktop\1stPersonShoot\AlienDefence_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\Miguel\Desktop\1stPersonShoot\AlienDefence_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
-Loading C:\Users\Miguel\Desktop\1stPersonShoot\AlienDefence_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
-Platform assembly: C:\Users\Miguel\Desktop\1stPersonShoot\AlienDefence_Data\Managed\Assembly-UnityScript-firstpass.dll (this message is harmless)
-Loading C:\Users\Miguel\Desktop\1stPersonShoot\AlienDefence_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
-Platform assembly: C:\Users\Miguel\Desktop\1stPersonShoot\AlienDefence_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
-Loading C:\Users\Miguel\Desktop\1stPersonShoot\AlienDefence_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
-- Completed reload, in  0.549 seconds
+Platform assembly: C:\Users\Miguel\Desktop\School\UnityForMe\1stPersonShoot\AlienDefence_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Miguel\Desktop\School\UnityForMe\1stPersonShoot\AlienDefence_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Miguel\Desktop\School\UnityForMe\1stPersonShoot\AlienDefence_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading C:\Users\Miguel\Desktop\School\UnityForMe\1stPersonShoot\AlienDefence_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\Miguel\Desktop\School\UnityForMe\1stPersonShoot\AlienDefence_Data\Managed\Assembly-UnityScript-firstpass.dll (this message is harmless)
+Loading C:\Users\Miguel\Desktop\School\UnityForMe\1stPersonShoot\AlienDefence_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
+Platform assembly: C:\Users\Miguel\Desktop\School\UnityForMe\1stPersonShoot\AlienDefence_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading C:\Users\Miguel\Desktop\School\UnityForMe\1stPersonShoot\AlienDefence_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+- Completed reload, in  0.051 seconds
 desktop: 1280x1024 60Hz; virtual: 1280x1024 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
-Platform assembly: C:\Users\Miguel\Desktop\1stPersonShoot\AlienDefence_Data\Managed\Boo.Lang.dll (this message is harmless)
-UnloadTime: 26.237608 ms
+Platform assembly: C:\Users\Miguel\Desktop\School\UnityForMe\1stPersonShoot\AlienDefence_Data\Managed\Boo.Lang.dll (this message is harmless)
+UnloadTime: 0.338144 ms
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 154.
-Total: 4.479747 ms (FindLiveObjects: 0.014355 ms CreateObjectMapping: 0.010527 ms MarkObjects: 0.083259 ms  DeleteObjects: 0.018502 ms)
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 155.
+Total: 0.470850 ms (FindLiveObjects: 0.010527 ms CreateObjectMapping: 0.009570 ms MarkObjects: 0.072094 ms  DeleteObjects: 0.010527 ms)
 
-UnloadTime: 26.442410 ms
+UnloadTime: 0.599089 ms
 Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
 
-Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 5803.
-Total: 0.990182 ms (FindLiveObjects: 0.229043 ms CreateObjectMapping: 0.053911 ms MarkObjects: 0.241165 ms  DeleteObjects: 0.028391 ms)
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 5812.
+Total: 1.324186 ms (FindLiveObjects: 0.400988 ms CreateObjectMapping: 0.174176 ms MarkObjects: 0.313581 ms  DeleteObjects: 0.031900 ms)
 

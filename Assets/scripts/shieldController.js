@@ -53,25 +53,16 @@ function Update () {
 					GameObject.FindGameObjectWithTag("BazookaAim").transform.position = Vector3(0.01, -7.230994, -7.202566);
 					GameObject.FindGameObjectWithTag("cursor").GetComponent(cursorController).canShootBazooka = false;
 					//only pistols can be used with shield
-					GameObject.FindGameObjectWithTag("pistol2").transform.position = Vector3(2.518723, -1.730917, -6.290473);
-					GameObject.FindGameObjectWithTag("pistol2.5").transform.position = Vector3(-2.658708, -1.730917, -6.290473);
-					GameObject.FindGameObjectWithTag("pistol3").transform.position = Vector3(1.60659,-7, -6.644174);
-					GameObject.FindGameObjectWithTag("pistol4").transform.position = Vector3(0.7007771,-7, -8.694506);
+					//GameObject.FindGameObjectWithTag("pistol2").transform.position = Vector3(2.518723, -1.730917, -6.290473);
+					//GameObject.FindGameObjectWithTag("pistol2.5").transform.position = Vector3(-2.658708, -1.730917, -6.290473);
+					//GameObject.FindGameObjectWithTag("pistol3").transform.position = Vector3(1.60659,-7, -6.644174);
+					//GameObject.FindGameObjectWithTag("pistol4").transform.position = Vector3(0.7007771,-7, -8.694506);
 					
 			}
 		
 		}
 		
-		if (Input.GetKeyDown (KeyCode.Q))
-		{
-				//power ups
-				GameObject.FindGameObjectWithTag("shield").transform.position = Vector3(0.28285, -24.1227, -12.1722);
-				GameObject.FindGameObjectWithTag("shield2").transform.position = Vector3(0.28285, -24.1227, -8.31573);
-				GameObject.FindGameObjectWithTag("BazookaAim").transform.position = Vector3(0.01, -7.230994, -7.202566);
-				GameObject.FindGameObjectWithTag("cursor").GetComponent(cursorController).canShootBazooka = false;
-				
-				
-		}
+		
 		
 	}
 	
