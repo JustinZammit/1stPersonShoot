@@ -15,7 +15,34 @@ Platform assembly: C:\Users\Miguel\Documents\GitHub\1stPersonShoot\AlienDefence_
 Loading C:\Users\Miguel\Documents\GitHub\1stPersonShoot\AlienDefence_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
 Platform assembly: C:\Users\Miguel\Documents\GitHub\1stPersonShoot\AlienDefence_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
 Loading C:\Users\Miguel\Documents\GitHub\1stPersonShoot\AlienDefence_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
-- Completed reload, in  0.049 seconds
+- Completed reload, in  0.059 seconds
 desktop: 1280x1024 60Hz; virtual: 1280x1024 at 0,0
 <RI> Initializing input.
 <RI> Input initialized.
+Platform assembly: C:\Users\Miguel\Documents\GitHub\1stPersonShoot\AlienDefence_Data\Managed\Boo.Lang.dll (this message is harmless)
+UnloadTime: 0.488393 ms
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 155.
+Total: 1.024000 ms (FindLiveObjects: 0.024244 ms CreateObjectMapping: 0.023606 ms MarkObjects: 0.117074 ms  DeleteObjects: 0.020416 ms)
+
+UnloadTime: 0.830684 ms
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 5808.
+Total: 0.912987 ms (FindLiveObjects: 0.191401 ms CreateObjectMapping: 0.046255 ms MarkObjects: 0.215646 ms  DeleteObjects: 0.028391 ms)
+
+6
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
+5
+ 
+(Filename: C:/BuildAgent/work/d3d49558e4d408f4/artifacts/StandalonePlayerGenerated/UnityEngineDebug.cpp Line: 53)
+
+UnloadTime: 9.122533 ms
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+
+Unloading 1014 unused Assets to reduce memory usage. Loaded Objects now: 195.
+Total: 4.418832 ms (FindLiveObjects: 0.027753 ms CreateObjectMapping: 0.032219 ms MarkObjects: 0.127282 ms  DeleteObjects: 3.838565 ms)
+

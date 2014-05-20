@@ -24,12 +24,6 @@ function Update () {
 		mp7 = false;
 	}	
 	//Debug.Log(pistol);
-	if ((Input.GetKeyDown(KeyCode.W)) && (GameObject.FindGameObjectWithTag("cursor").GetComponent(cursorController).score >= 5))
-	{
-		pistol = true;
-		rifle = false;
-		mp7 = false;
-	}
 	if ((Input.GetMouseButtonDown(0)) && ( pistol == true))
 	{
 		GetComponent(AudioSource).PlayClipAtPoint(pistolSound,transform.position);
