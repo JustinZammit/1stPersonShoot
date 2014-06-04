@@ -4,7 +4,7 @@ var bossHealth:int;
 
 function Start () {
 
-bossHealth=5;
+bossHealth=20;
 }
 
 function Update () {
