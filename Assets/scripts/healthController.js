@@ -20,7 +20,7 @@ function OnTriggerEnter(other: Collider){
 }
 
 function Start () {
-lives=5;
+lives=10;
 
 }
 

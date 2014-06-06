@@ -3,7 +3,7 @@
 public var enemyLives:int;
 
 function Start () {
-	enemyLives=1;
+	enemyLives=3;
 }
 
 function Update () {
